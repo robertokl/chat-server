@@ -46,4 +46,12 @@ public class ServerActionFactory extends ActionFactory {
     protected Action getPrivateMessageAction() {
 	return new PrivateMessageAction();
     }
+
+    protected Action getErrorAction() {
+	return null;
+    }
+
+    protected Action getAdminLoginAction() {
+	return new AdminLoginAction();
+    }
 }

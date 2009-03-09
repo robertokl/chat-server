@@ -7,6 +7,7 @@ public class Client {
 
     private String name;
     private Status status;
+    private boolean admin = false;
 
     public String getName() {
 	return name;
@@ -22,6 +23,14 @@ public class Client {
 
     public void setStatus(Status status) {
 	this.status = status;
+    }
+
+    public void setAdmin(boolean admin) {
+	this.admin = admin;
+    }
+    
+    public boolean isAdmin() {
+	return admin;
     }
 
 }

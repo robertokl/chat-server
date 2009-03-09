@@ -11,6 +11,10 @@ public class PrivateMessageAction extends ServerAction {
 	String senderName = Server.clients.get(super.client).getName();
 	String receiverName = super.params[0];
 	Socket receiver = findConnectionByName(receiverName);
+	if (receiver == null) {
+	    super.sendMessage(super.client, Actions.ERROR.getAction() + ";\"" + receiverName + "\" não encontrado.");
+	    return;
+	}
 	super.sendMessage(receiver, getActionMessage(senderName));
 	super.sendMessage(super.client, getActionMessage(senderName));
     }
