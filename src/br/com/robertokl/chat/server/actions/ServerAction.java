@@ -54,4 +54,13 @@ public abstract class ServerAction implements Action {
     protected void sendInfoMessage(String message) throws Exception {
 	broadcast(Actions.BROADCAST_MESSAGE.getAction() + ";Server;" + message);	
     }
+
+    protected Socket findConnectionByName(String name) {
+        for (Socket client : Server.clients.keySet()) {
+            if (Server.clients.get(client).getName().equals(name)) {
+        	return client;
+            }
+        }
+        return null;
+    }
 }

@@ -10,7 +10,7 @@ public class AdminLoginAction extends ServerAction {
     
     public void execute() throws Exception {
 	if(!adminPassword.equals(super.params[0])) {
-	    sendMessage(client, Actions.ERROR + ";Senha inválida.");
+	    sendMessage(client, Actions.ERROR.getAction() + ";Senha inválida.");
 	    return;
 	}
 	Client c = Server.clients.get(client);

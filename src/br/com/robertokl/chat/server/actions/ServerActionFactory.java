@@ -22,14 +22,6 @@ public class ServerActionFactory extends ActionFactory {
 	}
     }
 
-    protected Action getClientLoginAction() {
-	return new ClientLoginAction();
-    }
-
-    protected Action getSendMessageAction() {
-	return new SendMessageAction();
-    }
-
     protected String initialize(String data) {
 	if (!data.startsWith("newActionToServer:")) {
 	    throw new IllegalAccessError("Mensagem enviada errada ao servidor!");
@@ -37,6 +29,14 @@ public class ServerActionFactory extends ActionFactory {
 	updateClosedConnections();
 	data = data.replace("newActionToServer:", "");
 	return data;
+    }
+    
+    protected Action getClientLoginAction() {
+	return new ClientLoginAction();
+    }
+    
+    protected Action getSendMessageAction() {
+	return new SendMessageAction();
     }
 
     protected Action getStatusChangeAction() {
@@ -53,5 +53,9 @@ public class ServerActionFactory extends ActionFactory {
 
     protected Action getAdminLoginAction() {
 	return new AdminLoginAction();
+    }
+
+    protected Action getKickAction() {
+	return new KickAction();
     }
 }

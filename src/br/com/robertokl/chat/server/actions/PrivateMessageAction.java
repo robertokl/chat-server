@@ -22,13 +22,4 @@ public class PrivateMessageAction extends ServerAction {
     private String getActionMessage(String name) {
 	return Actions.PRIVATE_MESSAGE.getAction() + ";" + name + "(PM)" + ";" + super.params[1];
     }
-
-    private Socket findConnectionByName(String name) {
-	for (Socket client : Server.clients.keySet()) {
-	    if (Server.clients.get(client).getName().equals(name)) {
-		return client;
-	    }
-	}
-	return null;
-    }
 }
