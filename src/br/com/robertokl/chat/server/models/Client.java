@@ -8,6 +8,15 @@ public class Client {
     private String name;
     private Status status;
     private boolean admin = false;
+    private boolean mute = false;
+
+    public boolean isMute() {
+        return mute;
+    }
+
+    public void setMute(boolean mute) {
+        this.mute = mute;
+    }
 
     public String getName() {
 	return name;

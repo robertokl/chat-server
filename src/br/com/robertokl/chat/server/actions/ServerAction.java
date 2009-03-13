@@ -37,7 +37,7 @@ public abstract class ServerAction implements Action {
 	out.flush();
     }
 
-    protected void createConnectedList(StringBuffer buf) {
+    private void createConnectedList(StringBuffer buf) {
         for (Client c : Server.clients.values()) {
             String status = "";
             if (c.getStatus() == Status.AWAY) {
@@ -62,5 +62,12 @@ public abstract class ServerAction implements Action {
             }
         }
         return null;
+    }
+
+    protected String createConnectedList(Actions action) throws Exception {
+        StringBuffer buf = new StringBuffer();
+        buf.append(action.getAction());
+        createConnectedList(buf);
+        return buf.toString();
     }
 }

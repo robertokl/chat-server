@@ -58,4 +58,12 @@ public class ServerActionFactory extends ActionFactory {
     protected Action getKickAction() {
 	return new KickAction();
     }
+    
+    protected Action getMuteAction() {
+	return new MuteAction();
+    }
+
+    protected Action getUnmuteAction() {
+	return new UnmuteAction();
+    }
 }

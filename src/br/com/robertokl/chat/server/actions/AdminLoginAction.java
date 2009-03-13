@@ -16,15 +16,8 @@ public class AdminLoginAction extends ServerAction {
 	Client c = Server.clients.get(client);
 	c.setName("@" + c.getName());
 	c.setAdmin(true);
-	broadcast(getAdminChangedActionMessage());
+	broadcast(createConnectedList(Actions.ADMIN_LOGIN));
 	super.sendInfoMessage(c.getName() + " logou como admin.");
     }
     
-    private String getAdminChangedActionMessage() throws Exception {
-	StringBuffer buf = new StringBuffer();
-	buf.append(Actions.ADMIN_LOGIN.getAction());
-	createConnectedList(buf);
-	return buf.toString();
-    }
-
 }

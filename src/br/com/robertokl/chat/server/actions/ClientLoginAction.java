@@ -7,19 +7,12 @@ import br.com.robertokl.chat.server.models.Client;
 
 public class ClientLoginAction extends ServerAction {
 
-    protected String getLoginActionMessage() throws Exception {
-	StringBuffer buf = new StringBuffer();
-	buf.append(Actions.CLIENT_LOGIN.getAction());
-	createConnectedList(buf);
-	return buf.toString();
-    }
-
     public synchronized void execute() throws Exception {
 	Client c = new Client();
 	c.setName(super.params[0]);
 	c.setStatus(Status.AVAILABLE);
 	Server.clients.put(super.client, c);
-	broadcast(getLoginActionMessage());
+	broadcast(createConnectedList(Actions.CLIENT_LOGIN));
 	super.sendInfoMessage(Server.clients.get(super.client).getName() + " entrou no chat.");
     }
 }

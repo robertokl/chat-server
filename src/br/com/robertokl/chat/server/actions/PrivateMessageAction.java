@@ -4,11 +4,17 @@ import java.net.Socket;
 
 import br.com.robertokl.chat.commoms.constants.Actions;
 import br.com.robertokl.chat.server.Server;
+import br.com.robertokl.chat.server.models.Client;
 
 public class PrivateMessageAction extends ServerAction {
 
     public void execute() throws Exception {
-	String senderName = Server.clients.get(super.client).getName();
+	Client sender = Server.clients.get(super.client);
+	if (sender.isMute()) {
+	    sendMessage(client, Actions.MUTE.getAction());
+	    return;
+	}
+	String senderName = sender.getName();
 	String receiverName = super.params[0];
 	Socket receiver = findConnectionByName(receiverName);
 	if (receiver == null) {
