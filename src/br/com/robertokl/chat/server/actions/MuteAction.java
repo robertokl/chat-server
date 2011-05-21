@@ -7,7 +7,11 @@ import br.com.robertokl.chat.server.Server;
 import br.com.robertokl.chat.server.models.Client;
 
 public class MuteAction extends ServerAction {
-    private static final String notAdminMsg = "VocÍ n„o È admin. SÛ admin pode mutar. Digite /adminlogin <senha> para logar como admin.";
+    public MuteAction(String key) {
+		super(key);
+	}
+
+	private static final String notAdminMsg = "Voc√™ n√£o √© admin. S√≥ admin pode mutar. Digite /adminlogin <senha> para logar como admin.";
 
     public void execute() throws Exception {
 	Client c = Server.clients.get(client);
@@ -17,14 +21,14 @@ public class MuteAction extends ServerAction {
 	}
 	Socket clientSocket = findConnectionByName(params[0]);
 	if (clientSocket == null) {
-	    sendMessage(client, Actions.ERROR + ";Usu·rio n„o encontrado!");
+	    sendMessage(client, Actions.ERROR + ";Usu√°rio n√£o encontrado!");
 	    return;
 	}
 	Client toMuteClient = Server.clients.get(clientSocket);
 	toMuteClient.setMute(true);
 	toMuteClient.setName("-" + toMuteClient.getName());
 	broadcast(createConnectedList(Actions.STATUS_CHANGE));
-	sendInfoMessage(toMuteClient.getName() + " est· mudo.");
+	sendInfoMessage(toMuteClient.getName() + " est√° mudo.");
     }
 
 }

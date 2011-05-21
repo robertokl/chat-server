@@ -8,7 +8,11 @@ import br.com.robertokl.chat.server.models.Client;
 
 public class PrivateMessageAction extends ServerAction {
 
-    public void execute() throws Exception {
+    public PrivateMessageAction(String key) {
+		super(key);
+	}
+
+	public void execute() throws Exception {
 	Client sender = Server.clients.get(super.client);
 	if (sender.isMute()) {
 	    sendMessage(client, Actions.MUTE.getAction());
@@ -18,7 +22,7 @@ public class PrivateMessageAction extends ServerAction {
 	String receiverName = super.params[0];
 	Socket receiver = findConnectionByName(receiverName);
 	if (receiver == null) {
-	    super.sendMessage(super.client, Actions.ERROR.getAction() + ";\"" + receiverName + "\" não encontrado.");
+	    super.sendMessage(super.client, Actions.ERROR.getAction() + ";\"" + receiverName + "\" nï¿½o encontrado.");
 	    return;
 	}
 	super.sendMessage(receiver, getActionMessage(senderName));

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="(default package)" size="1525,700" id="" metadata="uml2-1.0" initialized="true" tag="10" key="32303037303533312D31302043686174202D20536572766572">
+  <children xsi:type="editmodel:ClassEditModel" name="Server" location="355,6" size="197,99" id="br.com.robertokl.chat.server/Server" runTimeClassModel="main([Ljava.lang.String;),clients">
+    <children xsi:type="editmodel:CompartmentEditModel" size="174,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="clients" id="br.com.robertokl.chat.server/Server#clients"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="57,18">
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="br.com.robertokl.chat.server/Server#main([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AdminLoginAction" location="15,393" size="217,81" id="br.com.robertokl.chat.server.actions/AdminLoginAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/AdminLoginAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.5/@sourceConnections.0 //@children.6/@sourceConnections.0 //@children.10/@sourceConnections.0 //@children.9/@sourceConnections.0" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/AdminLoginAction" source="//@children.1" target="//@children.7" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,135" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ClientLoginAction" location="465,393" size="217,81" id="br.com.robertokl.chat.server.actions/ClientLoginAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/ClientLoginAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/ClientLoginAction" source="//@children.2" target="//@children.1/@sourceConnections.0" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="KickAction" location="240,393" size="217,81" id="br.com.robertokl.chat.server.actions/KickAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/KickAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/KickAction" source="//@children.3" target="//@children.1/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MuteAction" location="690,195" size="217,81" id="br.com.robertokl.chat.server.actions/MuteAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/MuteAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/MuteAction" source="//@children.4" target="//@children.1/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="PrivateMessageAction" location="690,390" size="217,81" id="br.com.robertokl.chat.server.actions/PrivateMessageAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/PrivateMessageAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/PrivateMessageAction" source="//@children.5" target="//@children.1/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SendMessageAction" location="690,283" size="217,81" id="br.com.robertokl.chat.server.actions/SendMessageAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/SendMessageAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/SendMessageAction" source="//@children.6" target="//@children.1/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="ServerAction" location="345,182" size="217,135" id="br.com.robertokl.chat.server.actions/ServerAction" runTimeClassModel="client,setParams([Ljava.lang.String;),setClient(Ljava.net.Socket;),params">
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="client" id="br.com.robertokl.chat.server.actions/ServerAction#client"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="params" id="br.com.robertokl.chat.server.actions/ServerAction#params"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="87,36">
+      <children xsi:type="editmodel:MethodEditModel" name="setClient" id="br.com.robertokl.chat.server.actions/ServerAction#setClient(Ljava.net.Socket;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setParams" id="br.com.robertokl.chat.server.actions/ServerAction#setParams([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ServerActionFactory" location="345,121" size="217,43" id="br.com.robertokl.chat.server.actions/ServerActionFactory" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StatusChangeAction" location="690,102" size="217,81" id="br.com.robertokl.chat.server.actions/StatusChangeAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/StatusChangeAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/StatusChangeAction" source="//@children.9" target="//@children.1/@sourceConnections.0" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UnmuteAction" location="690,15" size="217,81" id="br.com.robertokl.chat.server.actions/UnmuteAction" runTimeClassModel="execute()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,18">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="br.com.robertokl.chat.server.actions/UnmuteAction#execute()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="br.com.robertokl.chat.server.actions/ServerAction&lt;-br.com.robertokl.chat.server.actions/UnmuteAction" source="//@children.10" target="//@children.1/@sourceConnections.0" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Client" location="60,15" size="217,279" id="br.com.robertokl.chat.server.models/Client" runTimeClassModel="getName(),setStatus(Lbr.com.robertokl.chat.commoms.constants.Status;),setAdmin(Z),setMute(Z),setName(Ljava.lang.String;),status,admin,isMute(),name,getStatus(),isAdmin(),mute">
+    <children xsi:type="editmodel:CompartmentEditModel" size="105,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="admin" id="br.com.robertokl.chat.server.models/Client#admin"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mute" id="br.com.robertokl.chat.server.models/Client#mute"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="br.com.robertokl.chat.server.models/Client#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="status" id="br.com.robertokl.chat.server.models/Client#status"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="83,144">
+      <children xsi:type="editmodel:MethodEditModel" name="getName" id="br.com.robertokl.chat.server.models/Client#getName()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStatus" id="br.com.robertokl.chat.server.models/Client#getStatus()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isAdmin" id="br.com.robertokl.chat.server.models/Client#isAdmin()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isMute" id="br.com.robertokl.chat.server.models/Client#isMute()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAdmin" id="br.com.robertokl.chat.server.models/Client#setAdmin(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMute" id="br.com.robertokl.chat.server.models/Client#setMute(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" id="br.com.robertokl.chat.server.models/Client#setName(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStatus" id="br.com.robertokl.chat.server.models/Client#setStatus(Lbr.com.robertokl.chat.commoms.constants.Status;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

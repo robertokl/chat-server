@@ -7,7 +7,11 @@ import br.com.robertokl.chat.server.Server;
 import br.com.robertokl.chat.server.models.Client;
 
 public class UnmuteAction extends ServerAction {
-    private static final String notAdminMsg = "VocÍ n„o È admin. SÛ admin pode desmutar. Digite /adminlogin <senha> para logar como admin.";
+    public UnmuteAction(String key) {
+		super(key);
+	}
+
+	private static final String notAdminMsg = "Voc√™ n√£o √© admin. S√≥ admin pode desmutar. Digite /adminlogin <senha> para logar como admin.";
 
     public void execute() throws Exception {
 	Client c = Server.clients.get(client);
@@ -17,14 +21,14 @@ public class UnmuteAction extends ServerAction {
 	}
 	Socket clientSocket = findConnectionByName(params[0]);
 	if (clientSocket == null) {
-	    sendMessage(client, Actions.ERROR + ";Usu·rio n„o encontrado!");
+	    sendMessage(client, Actions.ERROR + ";Usu√°rio n√£o encontrado!");
 	    return;
 	}
 	Client toUnmuteClient = Server.clients.get(clientSocket);
 	toUnmuteClient.setMute(false);
 	toUnmuteClient.setName(toUnmuteClient.getName().substring(1));
 	broadcast(createConnectedList(Actions.STATUS_CHANGE));
-	sendInfoMessage(toUnmuteClient.getName() + " n„o est· mais mudo.");
+	sendInfoMessage(toUnmuteClient.getName() + " n√£o est√° mais mudo.");
     }
 
 }

@@ -6,11 +6,17 @@ import br.com.robertokl.chat.server.models.Client;
 
 public class AdminLoginAction extends ServerAction {
 
+    public AdminLoginAction(String key) {
+		super(key);
+	}
+
+	/**
+	 */
     private final String adminPassword = "aaa123";
     
     public void execute() throws Exception {
 	if(!adminPassword.equals(super.params[0])) {
-	    sendMessage(client, Actions.ERROR.getAction() + ";Senha inválida.");
+	    sendMessage(client, Actions.ERROR.getAction() + ";Senha invï¿½lida.");
 	    return;
 	}
 	Client c = Server.clients.get(client);

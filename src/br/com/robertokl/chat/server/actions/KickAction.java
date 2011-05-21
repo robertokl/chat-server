@@ -8,7 +8,11 @@ import br.com.robertokl.chat.server.models.Client;
 
 public class KickAction extends ServerAction {
 
-    private static final String notAdminMsg = "VocÍ n„o È admin. SÛ admin pode kickar. Digite /adminlogin <senha> para logar como admin.";
+    public KickAction(String key) {
+		super(key);
+	}
+
+	private static final String notAdminMsg = "Voc√™ n√£o √© admin. S√≥ admin pode kickar. Digite /adminlogin <senha> para logar como admin.";
 
     public void execute() throws Exception {
 	Client c = Server.clients.get(client);
@@ -18,7 +22,7 @@ public class KickAction extends ServerAction {
 	}
 	Socket kicked = findConnectionByName(params[0]);
 	if (kicked == null) {
-	    sendMessage(client, Actions.ERROR.getAction() + ";Usu·rio n„o encontrado.");
+	    sendMessage(client, Actions.ERROR.getAction() + ";Usu√°rio n√£o encontrado.");
 	    return;
 	}
 	Client cKicked = Server.clients.remove(kicked);

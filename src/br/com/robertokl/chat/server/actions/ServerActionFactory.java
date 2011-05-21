@@ -10,6 +10,12 @@ import br.com.robertokl.chat.server.Server;
 
 public class ServerActionFactory extends ActionFactory {
 
+	private String key;
+
+	public ServerActionFactory(String key) {
+		this.key = key;
+	}
+	
     private void updateClosedConnections() {
 	List<Socket> closedSockets = new ArrayList<Socket>();
 	for (Socket socket : Server.clients.keySet()) {
@@ -32,19 +38,19 @@ public class ServerActionFactory extends ActionFactory {
     }
     
     protected Action getClientLoginAction() {
-	return new ClientLoginAction();
+	return new ClientLoginAction(key);
     }
     
     protected Action getSendMessageAction() {
-	return new SendMessageAction();
+	return new SendMessageAction(key);
     }
 
     protected Action getStatusChangeAction() {
-	return new StatusChangeAction();
+	return new StatusChangeAction(key);
     }
 
     protected Action getPrivateMessageAction() {
-	return new PrivateMessageAction();
+	return new PrivateMessageAction(key);
     }
 
     protected Action getErrorAction() {
@@ -52,18 +58,18 @@ public class ServerActionFactory extends ActionFactory {
     }
 
     protected Action getAdminLoginAction() {
-	return new AdminLoginAction();
+	return new AdminLoginAction(key);
     }
 
     protected Action getKickAction() {
-	return new KickAction();
+	return new KickAction(key);
     }
     
     protected Action getMuteAction() {
-	return new MuteAction();
+	return new MuteAction(key);
     }
 
     protected Action getUnmuteAction() {
-	return new UnmuteAction();
+	return new UnmuteAction(key);
     }
 }

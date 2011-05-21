@@ -6,7 +6,11 @@ import br.com.robertokl.chat.server.models.Client;
 
 public class SendMessageAction extends ServerAction {
 
-    private String getMessage() throws Exception {
+    public SendMessageAction(String key) {
+		super(key);
+	}
+
+	private String getMessage() throws Exception {
 	return Actions.BROADCAST_MESSAGE.getAction() + ";" + Server.clients.get(super.client).getName()
 		+ ";" + super.params[0];
     }

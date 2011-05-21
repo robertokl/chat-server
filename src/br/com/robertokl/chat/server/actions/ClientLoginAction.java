@@ -7,7 +7,11 @@ import br.com.robertokl.chat.server.models.Client;
 
 public class ClientLoginAction extends ServerAction {
 
-    public synchronized void execute() throws Exception {
+    public ClientLoginAction(String key) {
+		super(key);
+	}
+
+	public synchronized void execute() throws Exception {
 	Client c = new Client();
 	c.setName(super.params[0]);
 	c.setStatus(Status.AVAILABLE);
